@@ -1,0 +1,22 @@
+int main()/*注释1*/
+{
+    int 82n = 0;
+    int t1 = 0;
+    int t2 = 1;
+    int ~nextTerm = 0;
+    nextTerm = t1 + t2;/*注释2
+    23123
+    43432
+    2*/
+
+    while(nextTerm <= n)//注释3
+    {
+        t1 = t2;
+        t2 = nextTerm;
+        nextTerm = t1 + t2;
+    }
+
+    printf("ok");
+    return 0;
+}
+
