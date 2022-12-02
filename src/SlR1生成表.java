@@ -17,15 +17,12 @@ public class SlR1生成表 {
     public static List<String> gotohead = new ArrayList<>();
     public static List<String> actionhead = new ArrayList<>();
 
+    public static List<Character> arr = new ArrayList<>();
+
     public static void main(String[] args) throws IOException {
-//        词法分析器 chifa = new 词法分析器();
-//        chifa.main(args);
-//        for (int i = 0;i<chifa.ConstLs.size();i++){
-//            System.out.print('\n');
-//            System.out.print((i+1)+" , "+chifa.ConstLs.get(i));
-//        }
         First firstandfollow = new First();
         firstandfollow.main(args);
+        ProduceArr();
 
         for (Store store : firstandfollow.Aproduction) {
             System.out.print(store.head+"->");
@@ -130,6 +127,11 @@ public class SlR1生成表 {
         actionhead = action.head;
 
 
+    }
+    public static void ProduceArr(){
+        for (int i=0;i<10;i++){
+            arr.add((char)('0'+i));
+        }
     }
     public static int[][] ProduceGoto(Goto l){
         int n = l.lists.size();
@@ -382,11 +384,18 @@ public class SlR1生成表 {
             if (index>=str.length()-1){
                 continue;
             }
-            String next = str.charAt(index+1)+"";//获取下一个字符
+            String next = str.charAt(index+1)+"";//获取下一个字符 但是无法判断是不是数字。读两位以上
+            int p = 1;
+            if (arr.contains(str.charAt(index+1))&&index+2<str.length()){//判断是否为数字
+                if (arr.contains(str.charAt(index+2))){
+                    p = 2;
+                    next = next + str.charAt(index+2);
+                }
+            }
             if (next.equals(head)){
                 str = str.replace("·","");
                 StringBuffer mid = new StringBuffer(str);
-                mid.insert(index+1,'·');
+                mid.insert(index+p,'·');
                 str = mid.toString();
 
                 Singerdata newdata = new Singerdata();

@@ -1,126 +1,60 @@
-int main()/*注释1*/
+int main()
 {
-    int 82n = 0;
+    int n = 0;
     int t1 = 0;
     int t2 = 1;
-    int ~nextTerm = 0;
-    nextTerm = t1 + t2;/*注释2
-    23123
-    43432
-    2*/
-
-    while(nextTerm <= n)//注释3
-    {
-        t1 = t2;
-        t2 = nextTerm;
-        nextTerm = t1 + t2;
-    }
-
-    printf("ok");
-    return 0;
+    n = t1 + t2;
 }
 
 
 error:
-第3行 , 82n非法标识符错误
-第6行 , ~非法字符错误
-第6行 , nextTerm未定义变量名错误
-第7行 , nextTerm未定义变量名错误
-第9行 , nextTerm未定义变量名错误
-第9行 , n未定义变量名错误
-第11行 , nextTerm未定义变量名错误
-第12行 , nextTerm未定义变量名错误
 
 Token:
 1, classCode:9, Seman:int
 2, classCode:11, Seman:1
 3, classCode:31, Seman:(
 4, classCode:32, Seman:)
-5, classCode:16, Seman:/
-6, classCode:37, Seman:换行符
-7, classCode:33, Seman:{
-8, classCode:37, Seman:换行符
-9, classCode:9, Seman:int
-10, classCode:37, Seman:换行符
-11, classCode:9, Seman:int
-12, classCode:11, Seman:2
-13, classCode:28, Seman:=
-14, classCode:12, Seman:1
-15, classCode:35, Seman:;
-16, classCode:37, Seman:换行符
-17, classCode:9, Seman:int
-18, classCode:11, Seman:3
-19, classCode:28, Seman:=
-20, classCode:12, Seman:2
-21, classCode:35, Seman:;
-22, classCode:37, Seman:换行符
-23, classCode:9, Seman:int
-24, classCode:28, Seman:=
-25, classCode:12, Seman:3
-26, classCode:35, Seman:;
-27, classCode:37, Seman:换行符
-28, classCode:28, Seman:=
-29, classCode:11, Seman:1
-30, classCode:13, Seman:+
-31, classCode:11, Seman:2
-32, classCode:35, Seman:;
-33, classCode:16, Seman:/
+5, classCode:37, Seman:换行符
+6, classCode:33, Seman:{
+7, classCode:37, Seman:换行符
+8, classCode:9, Seman:int
+9, classCode:11, Seman:2
+10, classCode:28, Seman:=
+11, classCode:12, Seman:1
+12, classCode:35, Seman:;
+13, classCode:37, Seman:换行符
+14, classCode:9, Seman:int
+15, classCode:11, Seman:3
+16, classCode:28, Seman:=
+17, classCode:12, Seman:2
+18, classCode:35, Seman:;
+19, classCode:37, Seman:换行符
+20, classCode:9, Seman:int
+21, classCode:11, Seman:4
+22, classCode:28, Seman:=
+23, classCode:12, Seman:3
+24, classCode:35, Seman:;
+25, classCode:37, Seman:换行符
+26, classCode:11, Seman:1
+27, classCode:28, Seman:=
+28, classCode:11, Seman:2
+29, classCode:13, Seman:+
+30, classCode:11, Seman:3
+31, classCode:35, Seman:;
+32, classCode:37, Seman:换行符
+33, classCode:34, Seman:}
 34, classCode:37, Seman:换行符
 35, classCode:37, Seman:换行符
-36, classCode:4, Seman:while
-37, classCode:31, Seman:(
-38, classCode:21, Seman:<=
-39, classCode:32, Seman:)
-40, classCode:33, Seman:{
-41, classCode:37, Seman:换行符
-42, classCode:11, Seman:1
-43, classCode:28, Seman:=
-44, classCode:11, Seman:2
-45, classCode:35, Seman:;
-46, classCode:37, Seman:换行符
-47, classCode:11, Seman:2
-48, classCode:28, Seman:=
-49, classCode:35, Seman:;
-50, classCode:37, Seman:换行符
-51, classCode:28, Seman:=
-52, classCode:11, Seman:1
-53, classCode:13, Seman:+
-54, classCode:11, Seman:2
-55, classCode:35, Seman:;
-56, classCode:37, Seman:换行符
-57, classCode:34, Seman:}
-58, classCode:37, Seman:换行符
-59, classCode:37, Seman:换行符
-60, classCode:39, Seman:printf
-61, classCode:31, Seman:(
-62, classCode:40, Seman:"
-63, classCode:40, Seman:"
-64, classCode:32, Seman:)
-65, classCode:35, Seman:;
-66, classCode:37, Seman:换行符
-67, classCode:6, Seman:return
-68, classCode:12, Seman:4
-69, classCode:35, Seman:;
-70, classCode:37, Seman:换行符
-71, classCode:34, Seman:}
-72, classCode:37, Seman:换行符
-73, classCode:37, Seman:换行符
 
 Name:
 1 , main
-2 , t1
-3 , t2
+2 , n
+3 , t1
+4 , t2
 
 Const:
 1 , 0
-2 , 1
-3 , 0
-4 , 0
+2 , 0
+3 , 1
 
 注释:
-1 , 注释1
-2 , 注释2
-    23123
-    43432
-    2
-3 , 注释3
