@@ -2,13 +2,24 @@ int main(){
     int A = 0;
     int B = 0;
     if(A>0){
-        int A = 0;
+        A = 0;
         B = 9;
         while(A>3){
             int C = 3;
         }
     }
-    char D = 3;
+    int C = 3;
+    C = A + A * B;
+    C = 2 + 1;
+    while( C > 2 ){
+        A = 1 + A;
+        if(A>1){
+            C = C + 1;
+        }
+        else{
+            C = C + 2;
+        }
+    }
 }
 
 error:
@@ -40,50 +51,110 @@ Token:
 24, classCode:32, Seman:)
 25, classCode:33, Seman:{
 26, classCode:37, Seman:换行符
-27, classCode:9, Seman:int
-28, classCode:11, Seman:1
-29, classCode:28, Seman:=
-30, classCode:12, Seman:4
-31, classCode:35, Seman:;
-32, classCode:37, Seman:换行符
-33, classCode:11, Seman:2
-34, classCode:28, Seman:=
-35, classCode:12, Seman:5
-36, classCode:35, Seman:;
-37, classCode:37, Seman:换行符
-38, classCode:4, Seman:while
-39, classCode:31, Seman:(
-40, classCode:11, Seman:1
-41, classCode:18, Seman:>
-42, classCode:12, Seman:6
-43, classCode:32, Seman:)
-44, classCode:33, Seman:{
-45, classCode:37, Seman:换行符
-46, classCode:9, Seman:int
-47, classCode:11, Seman:4
-48, classCode:28, Seman:=
-49, classCode:12, Seman:7
-50, classCode:35, Seman:;
-51, classCode:37, Seman:换行符
-52, classCode:34, Seman:}
-53, classCode:37, Seman:换行符
-54, classCode:34, Seman:}
-55, classCode:37, Seman:换行符
-56, classCode:10, Seman:char
-57, classCode:11, Seman:5
-58, classCode:28, Seman:=
-59, classCode:12, Seman:8
-60, classCode:35, Seman:;
-61, classCode:37, Seman:换行符
-62, classCode:34, Seman:}
-63, classCode:37, Seman:换行符
+27, classCode:11, Seman:1
+28, classCode:28, Seman:=
+29, classCode:12, Seman:4
+30, classCode:35, Seman:;
+31, classCode:37, Seman:换行符
+32, classCode:11, Seman:2
+33, classCode:28, Seman:=
+34, classCode:12, Seman:5
+35, classCode:35, Seman:;
+36, classCode:37, Seman:换行符
+37, classCode:4, Seman:while
+38, classCode:31, Seman:(
+39, classCode:11, Seman:1
+40, classCode:18, Seman:>
+41, classCode:12, Seman:6
+42, classCode:32, Seman:)
+43, classCode:33, Seman:{
+44, classCode:37, Seman:换行符
+45, classCode:9, Seman:int
+46, classCode:11, Seman:4
+47, classCode:28, Seman:=
+48, classCode:12, Seman:7
+49, classCode:35, Seman:;
+50, classCode:37, Seman:换行符
+51, classCode:34, Seman:}
+52, classCode:37, Seman:换行符
+53, classCode:34, Seman:}
+54, classCode:37, Seman:换行符
+55, classCode:9, Seman:int
+56, classCode:11, Seman:3
+57, classCode:28, Seman:=
+58, classCode:12, Seman:8
+59, classCode:35, Seman:;
+60, classCode:37, Seman:换行符
+61, classCode:11, Seman:3
+62, classCode:28, Seman:=
+63, classCode:11, Seman:1
+64, classCode:13, Seman:+
+65, classCode:11, Seman:1
+66, classCode:15, Seman:*
+67, classCode:11, Seman:2
+68, classCode:35, Seman:;
+69, classCode:37, Seman:换行符
+70, classCode:11, Seman:3
+71, classCode:28, Seman:=
+72, classCode:12, Seman:9
+73, classCode:13, Seman:+
+74, classCode:12, Seman:10
+75, classCode:35, Seman:;
+76, classCode:37, Seman:换行符
+77, classCode:4, Seman:while
+78, classCode:31, Seman:(
+79, classCode:11, Seman:3
+80, classCode:18, Seman:>
+81, classCode:12, Seman:11
+82, classCode:32, Seman:)
+83, classCode:33, Seman:{
+84, classCode:37, Seman:换行符
+85, classCode:11, Seman:1
+86, classCode:28, Seman:=
+87, classCode:12, Seman:12
+88, classCode:13, Seman:+
+89, classCode:11, Seman:1
+90, classCode:35, Seman:;
+91, classCode:37, Seman:换行符
+92, classCode:1, Seman:if
+93, classCode:31, Seman:(
+94, classCode:11, Seman:1
+95, classCode:18, Seman:>
+96, classCode:12, Seman:13
+97, classCode:32, Seman:)
+98, classCode:33, Seman:{
+99, classCode:37, Seman:换行符
+100, classCode:11, Seman:3
+101, classCode:28, Seman:=
+102, classCode:11, Seman:3
+103, classCode:13, Seman:+
+104, classCode:12, Seman:14
+105, classCode:35, Seman:;
+106, classCode:37, Seman:换行符
+107, classCode:34, Seman:}
+108, classCode:37, Seman:换行符
+109, classCode:2, Seman:else
+110, classCode:33, Seman:{
+111, classCode:37, Seman:换行符
+112, classCode:11, Seman:3
+113, classCode:28, Seman:=
+114, classCode:11, Seman:3
+115, classCode:13, Seman:+
+116, classCode:12, Seman:15
+117, classCode:35, Seman:;
+118, classCode:37, Seman:换行符
+119, classCode:34, Seman:}
+120, classCode:37, Seman:换行符
+121, classCode:34, Seman:}
+122, classCode:37, Seman:换行符
+123, classCode:34, Seman:}
+124, classCode:37, Seman:换行符
 
 Name:
 1 , main
 2 , A
 3 , B
 4 , C
-5 , D
 
 Const:
 1 , 0
@@ -94,5 +165,12 @@ Const:
 6 , 3
 7 , 3
 8 , 3
+9 , 2
+10 , 1
+11 , 2
+12 , 1
+13 , 1
+14 , 1
+15 , 2
 
 注释:

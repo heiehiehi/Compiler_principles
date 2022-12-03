@@ -45,7 +45,7 @@ S->O
 O->F|OF
 F->TNXA
 T-><float>|<int>|<string>|<bool>
-N-><main>|<ID>
+N-><ID>
 X->()|(T<ID>)
 A->{}|{L}
 L->Y|LY
@@ -133,3 +133,9 @@ W->U31P32A
 U->4
 R->6V35
 end
+————————————
+
+S->E
+E->E+T|T
+T->T*P|P
+P->i|(E)

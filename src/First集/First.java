@@ -1,5 +1,9 @@
 package First集;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,14 +20,8 @@ public class First {
 //        System.out.print(delgoalindex("123456",5));
         Scanner sc = new Scanner(System.in);
         List<String> strlist = new ArrayList<>();
-        while(true){
-            String mid = sc.nextLine();
-            if (mid.equals("end")){
-                break;
-            }
-            strlist.add(mid);
-        }
-
+        String text = readTxtFile("src\\wenfa.txt");
+        Readline(text,strlist);
 
         addnew(strlist);
         int count = Bproduction.size();//记录原本的有多少个
@@ -51,6 +49,41 @@ public class First {
 
 
 
+    }
+    public static void Readline(String text,List<String> strlist){
+        String mid = "";
+        for (int i=0;i<text.length();i++){
+            if (text.charAt(i)=='\n'){
+                strlist.add(mid);
+                mid = "";
+            }
+            else if (mid.equals("end")){
+                break;
+            }
+            else{
+                mid = mid + text.charAt(i);
+            }
+        }
+    }
+    public static String readTxtFile(String filePath) {
+        File file = new File(filePath);
+        String encoding = "utf-8";
+        try (InputStreamReader read = new InputStreamReader(new FileInputStream(file), encoding);
+             BufferedReader bufferedReader = new BufferedReader(read)) {
+            if (file.isFile() && file.exists()) {
+                String lineTxt;
+                String all = "";
+                while ((lineTxt = bufferedReader.readLine()) != null) {
+                    all = all + lineTxt + '\n';
+                }
+                return all;
+            } else {
+                System.out.println("找不到指定的文件");
+            }
+        } catch (Exception e) {
+            System.out.println("读取文件内容出错");
+        }
+        return null;
     }
     public static List<Store> getcopyA(List<Store> A){
         List<Store> newA = new ArrayList<>();
