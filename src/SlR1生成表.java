@@ -23,6 +23,7 @@ public class SlR1生成表 {
         First firstandfollow = new First();
         firstandfollow.main(args);
         ProduceArr();
+        Ap = firstandfollow.Aproduction;
 
         for (Store store : firstandfollow.Aproduction) {
             System.out.print(store.head+"->");
@@ -46,6 +47,28 @@ public class SlR1生成表 {
 
         for (Followstore i:firstandfollow.Allfollows){
             action.Addhead(i.follow);
+        }
+        for (Store store : Ap) {
+            for (String string : store.strings) {
+                for (int i = 0;i<string.length();i++){
+                    if (gotolist.head.contains(string.charAt(i)+"")){
+                        continue;
+                    }
+                    else {
+                        String ss = string.charAt(i)+"";
+                        if(arr.contains(string.charAt(i))){
+                            if (i+1<string.length()&&arr.contains(string.charAt(i+1))){
+                                ss = ss + string.charAt(i+1);
+                                i++;
+                            }
+                        }
+                        if (!action.head.contains(ss)){
+                            action.head.add(ss);
+                        }
+                    }
+                }
+            }
+
         }
 
 
@@ -122,7 +145,7 @@ public class SlR1生成表 {
             System.out.println(Arrays.toString(goto1[i]));
         }
         //获取到了其中三个表
-        Ap = firstandfollow.Aproduction;
+
         gotohead = gotolist.head;
         actionhead = action.head;
 

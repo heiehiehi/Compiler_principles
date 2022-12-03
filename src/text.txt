@@ -1,8 +1,7 @@
-int main()
-{
-    int n = 0;
-    int t1 = 0;
-    int t2 = 1;
-    n = t1 + t2;
+int main(){
+    int A = 0;
+    int A = 0;
+    if(A>0){
+        int A = 0;
+    }
 }
-

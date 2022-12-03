@@ -64,9 +64,11 @@ public class SLR1 {
 //
 //        System.out.println(ch.toString());
         charclass_stack.push(99);//99作为最后的#
-        for (int i = ch.size()-1;i>=0;i--){
+        for (int i = chclass.size()-1;i>=0;i--){
 //            char_stack.push(ch.get(i));
-            charclass_stack.push(chclass.get(i));
+            if (!(chclass.get(i)==37)){
+                charclass_stack.push(chclass.get(i));
+            }
         }
 
         state_stack.push(0);
@@ -139,9 +141,6 @@ public class SLR1 {
             Store store = AP.get(i);
             for (String s : store.strings) {
                 int len = 0;
-                if (!s.equals("ε")){
-                    len = 0;
-                }
                 ProductionUnit Unit = new ProductionUnit(store.head,callen(s));
                 production.add(Unit);
             }
@@ -155,6 +154,9 @@ public class SLR1 {
         for (int i = 0;i<10;i++){
             arr.add((char)('0'+i));
         }//将0~9获取
+        if(s.length()==1&&s.equals("ε")){
+            return 0;
+        }
 
         for (int i = 0;i<s.length();i++){
             if (gotohead.contains(s.charAt(i)+"")){
