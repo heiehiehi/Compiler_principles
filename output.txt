@@ -1,9 +1,14 @@
 int main(){
     int A = 0;
-    int A = 0;
+    int B = 0;
     if(A>0){
         int A = 0;
+        B = 9;
+        while(A>3){
+            int C = 3;
+        }
     }
+    char D = 3;
 }
 
 error:
@@ -22,7 +27,7 @@ Token:
 11, classCode:35, Seman:;
 12, classCode:37, Seman:换行符
 13, classCode:9, Seman:int
-14, classCode:11, Seman:1
+14, classCode:11, Seman:3
 15, classCode:28, Seman:=
 16, classCode:12, Seman:2
 17, classCode:35, Seman:;
@@ -41,19 +46,53 @@ Token:
 30, classCode:12, Seman:4
 31, classCode:35, Seman:;
 32, classCode:37, Seman:换行符
-33, classCode:34, Seman:}
-34, classCode:37, Seman:换行符
-35, classCode:34, Seman:}
-36, classCode:37, Seman:换行符
+33, classCode:11, Seman:2
+34, classCode:28, Seman:=
+35, classCode:12, Seman:5
+36, classCode:35, Seman:;
+37, classCode:37, Seman:换行符
+38, classCode:4, Seman:while
+39, classCode:31, Seman:(
+40, classCode:11, Seman:1
+41, classCode:18, Seman:>
+42, classCode:12, Seman:6
+43, classCode:32, Seman:)
+44, classCode:33, Seman:{
+45, classCode:37, Seman:换行符
+46, classCode:9, Seman:int
+47, classCode:11, Seman:4
+48, classCode:28, Seman:=
+49, classCode:12, Seman:7
+50, classCode:35, Seman:;
+51, classCode:37, Seman:换行符
+52, classCode:34, Seman:}
+53, classCode:37, Seman:换行符
+54, classCode:34, Seman:}
+55, classCode:37, Seman:换行符
+56, classCode:10, Seman:char
+57, classCode:11, Seman:5
+58, classCode:28, Seman:=
+59, classCode:12, Seman:8
+60, classCode:35, Seman:;
+61, classCode:37, Seman:换行符
+62, classCode:34, Seman:}
+63, classCode:37, Seman:换行符
 
 Name:
 1 , main
 2 , A
+3 , B
+4 , C
+5 , D
 
 Const:
 1 , 0
 2 , 0
 3 , 0
 4 , 0
+5 , 9
+6 , 3
+7 , 3
+8 , 3
 
 注释:

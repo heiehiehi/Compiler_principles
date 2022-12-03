@@ -12,6 +12,8 @@ public class SLR1 {
     public static Stack<Integer> charclass_stack = new Stack<>();
     public static List<String> gotohead = new ArrayList<>();
     public static List<String> actionhead = new ArrayList<>();
+
+    public static ArrayList<String> lists = new ArrayList<>();
     public static void main(String[] args) throws IOException {
         词法分析器 chifa = new 词法分析器();
         chifa.main(args);
@@ -22,6 +24,7 @@ public class SLR1 {
             System.out.println(alLdata.seman+" "+alLdata.classCode);
         }
 
+        lists = chifa.Alllists;
 
         SlR1生成表 skl1 = new SlR1生成表();
         skl1.main(args);
@@ -63,12 +66,12 @@ public class SLR1 {
 //        }
 //
 //        System.out.println(ch.toString());
-        charclass_stack.push(99);//99作为最后的#
+        charclass_stack.push(38);//99作为最后的#
         for (int i = chclass.size()-1;i>=0;i--){
 //            char_stack.push(ch.get(i));
-            if (!(chclass.get(i)==37)){
+//            if (!(chclass.get(i)==37)){
                 charclass_stack.push(chclass.get(i));
-            }
+//            }
         }
 
         state_stack.push(0);
@@ -81,7 +84,10 @@ public class SLR1 {
         int ch;
         s = state_stack.peek();
         ch = charclass_stack.peek();
-        System.out.println("S="+s+",ch="+ch);
+        int n = 1;
+        System.out.println("第"+n+"行:");
+        n++;
+        System.out.print("(S="+s+",ch="+"["+lists.get(ch)+"]"+") ");
         while (true){
 
             k = vt_to_int(ch);
@@ -95,14 +101,21 @@ public class SLR1 {
                         state_stack.pop();
                     state_stack.push(goto1[state_stack.peek()][vn_to_int(production.get(m).left)]);
                     break;
-                case 'a': System.out.println("可以接受"); System.exit(0);
-                default: error();
+                case 'a': System.out.println();System.out.println("可以接受"); System.exit(0);
+                default: error(n);
             }
 
             s = state_stack.peek();
             ch = charclass_stack.peek();
 
-            System.out.println("S="+s+",ch="+ch);
+            if (ch==37){
+                System.out.println();
+                System.out.println("第"+n+"行:");
+                charclass_stack.pop();
+                ch = charclass_stack.peek();
+                n++;
+            }
+            System.out.print("(S="+s+",ch="+"["+lists.get(ch)+"]"+") ");
         }
     }
     public static int vn_to_int(String ch){
@@ -115,7 +128,7 @@ public class SLR1 {
     }
     public static int vt_to_int(int ch){
         int i = actionhead.indexOf(ch+"");
-        if (ch==99){
+        if (ch==38){
             i = actionhead.indexOf('#'+"");//如果是99表示是#终结符
         }
         if (i==-1){
@@ -124,8 +137,8 @@ public class SLR1 {
         }
         return i;
     }
-    public static void error(){
-        System.out.println("出现错误");
+    public static void error(int n){
+        System.out.println("第"+(n-1)+"行"+"出现错误");
         System.exit(0);
     }
     public static void init_state_stack(Stack<Integer> state_stack){
@@ -178,5 +191,11 @@ class ProductionUnit{
     public ProductionUnit(String left,int length){
         this.left = left;
         this.length = length;
+    }
+}
+class ReadChar{
+    public ArrayList<String> lists;
+    ReadChar(ArrayList<String> lists){
+        this.lists = lists;
     }
 }

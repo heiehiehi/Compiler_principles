@@ -9,6 +9,7 @@ public class 词法分析器 {
     public static ArrayList<store> ALLdatas;
     public static List<String> NameLs;
     public static List<Integer> ConstLs;
+    public static ArrayList<String> Alllists;
     public static void main(String[] args) throws IOException {
         String text = readTxtFile("src\\text.txt");
         System.out.println(text);
@@ -27,6 +28,7 @@ public class 词法分析器 {
 
         ArrayList<String> lists = new ArrayList<>();
         setlists(lists);
+        Alllists = lists;
 
         ArrayList<store> ALLdata = new ArrayList<>();
         readline(text,arr,dangchi,NameL,ConstL,lists,ALLdata);

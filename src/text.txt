@@ -1,7 +1,12 @@
 int main(){
     int A = 0;
-    int A = 0;
+    int B = 0;
     if(A>0){
         int A = 0;
+        B = 9;
+        while(A>3){
+            int C = 3;
+        }
     }
+    char D = 3;
 }
